@@ -122,6 +122,32 @@ Three frequency bands appear **by design — do not unify them**:
 - **0.80–3.00 GHz** — wider Mie pole-search band (`compute_exact_mie_poles.py`).
 - **0.90–2.80 GHz** — estimator candidate band (`run_estimator_baselines.py`).
 
+## Numerical settings (full)
+
+The letter quotes only the essential subset; the complete settings behind the
+reference run are:
+
+- **Domain and standoffs (reference 2 mm grid).** 120 mm cubic domain; sphere
+  radius 24 mm (RC = 12 cells); scatterer-to-Huygens gap 6 cells (12 mm), Huygens
+  radius 36 mm (18 cells); Huygens-to-PML buffer 4 cells; TF-SF gap 3 cells;
+  8-cell CPML. On finer grids these gaps scale with 1/Δ, so the physical domain
+  is fixed.
+- **Huygens surface.** 24 × 48 = 1152 nodes (6912 signals), polar angle offset by
+  half a cell to avoid the poles. Each field component is trilinearly
+  interpolated to the surface with its Yee half-cell spatial offset removed; E
+  and H share the time-step index, leaving only the half-timestep Yee stagger as
+  a common < 1° phase (at 2 GHz) that is negligible in the RCS.
+- **Near-to-far transform.** Equivalent currents Js = n̂ × H, Ms = −n̂ × E; the
+  backscatter RCS is self-calibrated by the incident-field phasor measured with
+  the same DFT, so the transform normalization cancels.
+- **Spectra.** Rectangular-windowed (untruncated) rFFT of length 65536
+  (Δf ≈ 4.40 MHz, 318 bins in 1.20–2.60 GHz); the identical window and bins are
+  applied to the full and completed records.
+- **Solver / timing.** Single-precision (float32) Yee leapfrog with Numba-parallel
+  kernels. Reported wall-clock times are the FDTD update loop plus recorder
+  (setup excluded) and are hardware-dependent; the manuscript values were
+  measured on an Apple-silicon (arm64) workstation, Python 3.12 / NumPy 2.4.
+
 ## Notes
 
 - **In-house solver, no proprietary software.** Everything runs on the bundled
