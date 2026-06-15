@@ -1,5 +1,7 @@
 # Surface-Wide Common-Pole Ringdown Completion — reproduction code
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20698908.svg)](https://doi.org/10.5281/zenodo.20698908)
+
 Reproduction code for the IEEE *Antennas and Wireless Propagation Letters* (AWPL)
 manuscript **"Surface-Wide Common-Pole Ringdown Completion for Accelerated FDTD
 RCS Computation."**

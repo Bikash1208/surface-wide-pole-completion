@@ -18,8 +18,9 @@ authors:
   - family-names: Mishra
     given-names: Rabindra K.
 version: "1.0.0"
-date-released: "2026-06-15"   # TODO: set to release date
-license: MIT                  # TODO: confirm license (see README)
+date-released: "2026-06-15"
+license: MIT
+doi: "10.5281/zenodo.20698908"
 preferred-citation:
   type: article
   title: "Surface-Wide Common-Pole Ringdown Completion for Accelerated FDTD RCS Computation"
