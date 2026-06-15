@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying IEEE AWPL letter."
+title: "Surface-Wide Common-Pole Ringdown Completion for Accelerated FDTD RCS Computation — reproduction code"
+type: software
+authors:
+  - family-names: Santi
+    given-names: Bikash K.
+    orcid: "https://orcid.org/0009-0003-1773-0552"
+  - family-names: Raut
+    given-names: Biku
+    orcid: "https://orcid.org/0009-0000-0405-4493"
+  - family-names: Panda
+    given-names: Dhruba C.
+    orcid: "https://orcid.org/0000-0003-1414-3400"
+  - family-names: Naik
+    given-names: Deepak K.
+    orcid: "https://orcid.org/0000-0003-0633-1604"
+  - family-names: Mishra
+    given-names: Rabindra K.
+version: "1.0.0"
+date-released: "2026-06-15"   # TODO: set to release date
+license: MIT                  # TODO: confirm license (see README)
+preferred-citation:
+  type: article
+  title: "Surface-Wide Common-Pole Ringdown Completion for Accelerated FDTD RCS Computation"
+  authors:
+    - family-names: Santi
+      given-names: Bikash K.
+    - family-names: Raut
+      given-names: Biku
+    - family-names: Panda
+      given-names: Dhruba C.
+    - family-names: Naik
+      given-names: Deepak K.
+    - family-names: Mishra
+      given-names: Rabindra K.
+  journal: "IEEE Antennas and Wireless Propagation Letters"
+  year: 2026   # TODO: fill on acceptance
+  # volume:    # TODO
+  # number:    # TODO
+  # start:     # TODO (first page)
+  # doi:       # TODO

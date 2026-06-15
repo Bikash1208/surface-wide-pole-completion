@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated manuscript outputs (regenerate with the scripts; do not commit)
+results/*.pdf
+results/*.png
+results/*.csv
+figures_out/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+
+# Regenerable intermediate data (not committed; produced by the run_* scripts).
+# Commit these only if you deliberately want one-command figure rebuilds.
+*.npz
+*.csv
